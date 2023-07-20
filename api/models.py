@@ -2,9 +2,10 @@ import pytz
 from django.core.validators import RegexValidator
 from django.db import models
 from django.utils import timezone
+from django_prometheus.models import ExportModelOperationsMixin
 
 
-class Mailing(models.Model):
+class Mailing(ExportModelOperationsMixin('mailing'), models.Model):
     date_start = models.DateTimeField(verbose_name="Mailing start")
     date_end = models.DateTimeField(verbose_name="Mailing end")
     time_start = models.TimeField(verbose_name="Start time for sending message")
@@ -27,7 +28,7 @@ class Mailing(models.Model):
         verbose_name_plural = "Mailings"
 
 
-class Client(models.Model):
+class Client(ExportModelOperationsMixin('client'), models.Model):
     TIMEZONES = tuple(zip(pytz.all_timezones, pytz.all_timezones))
 
     phone_regex = RegexValidator(
@@ -60,7 +61,7 @@ class Client(models.Model):
         verbose_name_plural = "Clients"
 
 
-class Message(models.Model):
+class Message(ExportModelOperationsMixin('message'), models.Model):
     SENT = "sent"
     NO_SENT = "no sent"
 

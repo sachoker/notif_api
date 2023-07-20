@@ -5,8 +5,8 @@ import pytz
 import requests
 from celery.utils.log import get_task_logger
 from dotenv import load_dotenv
-from celery_service import app
 
+from celery_service import app
 from .models import Message, Client, Mailing
 
 logger = get_task_logger(__name__)
