@@ -1,7 +1,7 @@
 #Fabrique
 
 Доп задания:
-простые тесты, docker-compose, swagger, обработка ошибок сервиса, временные рамки для отправки, admin интерфейс
+простые тесты, docker-compose, swagger, обработка ошибок сервиса, временные рамки для отправки, admin интерфейс, prometheus(в отдельной ветке, ещё не тестировал)
 
 ## Installation with docker-compose
 
@@ -21,6 +21,14 @@ sudo docker-compose up -d
 sudo docker-compose stop
 ```
 
+## Admin interface
+
+1. Create superuser
+```
+python3 manage.py createsuperuser
+```
+
+2. Go to ```http://0.0.0.0:8000/admin/```
 
 ***
 ```http://0.0.0.0:8000/api/```
