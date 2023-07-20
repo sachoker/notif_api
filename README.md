@@ -1,7 +1,7 @@
 #Fabrique
 
 Доп задания:
-простые тесты, docker-compose, swagger, обработка ошибок сервиса, временные рамки для отправки
+простые тесты, docker-compose, swagger, обработка ошибок сервиса, временные рамки для отправки, admin интерфейс
 
 ## Installation with docker-compose
 
