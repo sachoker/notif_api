@@ -35,6 +35,8 @@ sudo docker-compose stop
 
 ```http://0.0.0.0:8000/api/messages/```
 
+```http://0.0.0.0:8000/admin/```
+
 ```http://0.0.0.0:8000/docs/``` - docs
 
 ```http://0.0.0.0:5555``` - celery flower
